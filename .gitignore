@@ -4,6 +4,14 @@
 # mounted volume
 sites
 
+# Database and persistent data
+mariadb-data/
+redis-queue-data/
+traefik/
+
+# Secrets
+secrets/
+
 development/*
 !development/README.md
 !development/installer.py
