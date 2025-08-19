@@ -1,0 +1,49 @@
+volumes:
+  sites:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/sites
+      o: bind
+
+  logs:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/logs
+      o: bind
+
+  db-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/mariadb-data
+      o: bind
+
+  redis-queue-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/redis-queue-data
+      o: bind
+
+  cert-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/traefik/letsencrypt
+      o: bind
+
+  n8n-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/n8n
+      o: bind
+
+  ollama-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: /opt/frappe_docker/ollama-data
+      o: bind

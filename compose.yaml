@@ -3,7 +3,7 @@ x-customizable-image: &customizable_image
   # See https://github.com/frappe/frappe_docker/blob/main/docs/custom-apps.md
   # about using custom images.
   image: ${CUSTOM_IMAGE:-frappe/erpnext}:${CUSTOM_TAG:-$ERPNEXT_VERSION}
-  pull_policy: ${PULL_POLICY:-always}
+  pull_policy: ${PULL_POLICY:-missing}
   restart: ${RESTART_POLICY:-unless-stopped}
 
 x-depends-on-configurator: &depends_on_configurator

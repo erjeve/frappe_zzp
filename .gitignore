@@ -8,6 +8,7 @@ sites
 mariadb-data/
 redis-queue-data/
 traefik/
+ollama-data/
 
 # Secrets
 secrets/

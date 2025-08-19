@@ -1,0 +1,52 @@
+# Dutch RGS 3.7 Extension Layer
+# Extends the standard frappe/erpnext image with Dutch RGS 3.7 compliance
+# Follows frappe_docker layered architecture patterns
+
+ARG ERPNEXT_VERSION=v15
+FROM frappe/erpnext:${ERPNEXT_VERSION}
+
+# Metadata for the RGS layer
+LABEL maintainer="ERPNext Netherlands Community"
+LABEL description="Dutch RGS 3.7 Chart of Accounts extension layer"
+LABEL version="0.1.0"
+LABEL rgs.version="3.7"
+LABEL compliance="Dutch tax and reporting standards"
+LABEL layer.type="extension"
+
+# Install Dutch locale support
+USER root
+RUN apt-get update && apt-get install -y \
+    locales \
+    && sed -i '/nl_NL.UTF-8/s/^# //g' /etc/locale.gen \
+    && locale-gen \
+    && rm -rf /var/lib/apt/lists/*
+
+# Switch back to frappe user for file operations
+USER frappe
+
+# Create RGS directories
+RUN mkdir -p /home/frappe/rgs_scripts
+
+# Copy RGS implementation files
+COPY --chown=frappe:frappe ../../add_complete_rgs.py /home/frappe/rgs_scripts/
+COPY --chown=frappe:frappe ../../verify_rgs_complete.py /home/frappe/rgs_scripts/
+COPY --chown=frappe:frappe ../../create_final_rgs.py /home/frappe/rgs_scripts/
+COPY --chown=frappe:frappe ../../rgs_installer_clean.py /home/frappe/rgs_scripts/
+COPY --chown=frappe:frappe ../../nl_rgs_zzp_chart_of_accounts.json /home/frappe/frappe-bench/apps/erpnext/erpnext/accounts/doctype/account/chart_of_accounts/verified/
+COPY --chown=frappe:frappe ../../definitief_rgs_3_7.csv /home/frappe/rgs_scripts/
+
+# Copy chainable initialization script
+COPY --chown=frappe:frappe images/rgs/docker-entrypoint-rgs.sh /home/frappe/
+COPY --chown=frappe:frappe images/rgs/rgs-auto-installer.sh /home/frappe/
+RUN chmod +x /home/frappe/docker-entrypoint-rgs.sh && \
+    chmod +x /home/frappe/rgs-auto-installer.sh
+
+# Set Dutch environment variables
+ENV LANG=nl_NL.UTF-8
+ENV LANGUAGE=nl_NL:nl  
+ENV LC_ALL=nl_NL.UTF-8
+ENV RGS_VERSION=3.7
+ENV COUNTRY_CODE=NL
+
+# Note: We don't override ENTRYPOINT here to maintain compatibility
+# The initialization will be handled via command chaining in compose override

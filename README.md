@@ -70,6 +70,8 @@ If you ran in a Dev Docker environment, to view container logs: `docker compose 
 - [Custom Apps](docs/custom-apps.md)
 - [Custom Apps with podman](docs/custom-apps-podman.md)
 - [Build Version 10 Images](docs/build-version-10-images.md)
+- [Dutch RGS 3.7 Support](images/rgs/README.md) 🇳🇱
+- [Dutch RGS Installation Guide](RGS_INSTALLATION_GUIDE.md) 📋
 
 ### [Development](#development)
 

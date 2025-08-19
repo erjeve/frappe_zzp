@@ -1,0 +1,61 @@
+# Dutch RGS 3.7 Support Override
+# Uses Docker Compose profiles for clean, optional RGS integration
+# Compatible with all existing overrides using YAML anchors
+
+x-customizable-image: &customizable_image
+  # Override to use RGS-enabled image built from layered Containerfile
+  build:
+    context: .
+    dockerfile: images/rgs/Containerfile
+    args:
+      ERPNEXT_VERSION: ${ERPNEXT_VERSION:-v15}
+  pull_policy: ${PULL_POLICY:-never}
+  restart: ${RESTART_POLICY:-unless-stopped}
+
+# Environment anchor for Dutch locale only (lighter footprint)
+x-dutch-locale: &dutch_locale
+  LANG: "nl_NL.UTF-8"
+  TZ: "Europe/Amsterdam"
+
+services:
+  configurator:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+      
+  backend:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles  
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+
+  frontend:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+
+  websocket:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+
+  scheduler:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+
+  queue-short:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest
+
+  queue-long:
+    profiles: ["", "rgs"]  # Available in default and rgs profiles
+    environment:
+      <<: *dutch_locale
+    image: frappe/erpnext:rgs-latest

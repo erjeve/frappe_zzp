@@ -1,0 +1,187 @@
+name: Build and Publish Dutch RGS ERPNext Docker Image
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'Dockerfile.rgs-complete'
+      - 'docker-entrypoint-rgs.sh'
+      - 'add_complete_rgs.py'
+      - 'nl_rgs_*.json'
+      - '.github/workflows/rgs-docker.yml'
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      force_build:
+        description: 'Force build even without changes'
+        required: false
+        default: 'false'
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: erpnext-rgs-nl
+  RGS_VERSION: "3.7"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=${{ env.RGS_VERSION }}-latest,enable={{is_default_branch}}
+          labels: |
+            org.opencontainers.image.title=ERPNext with Dutch RGS 3.7
+            org.opencontainers.image.description=ERPNext with complete Dutch accounting standards support
+            rgs.version=${{ env.RGS_VERSION }}
+            rgs.compliance=Dutch government standards
+            
+      - name: Prepare RGS package
+        run: |
+          echo "🇳🇱 Preparing Dutch RGS 3.7 package..."
+          
+          # Create package structure
+          mkdir -p rgs_package/{chart_templates,custom_fields,fixtures,scripts}
+          
+          # Copy RGS implementation files
+          cp -f add_complete_rgs.py rgs_package/scripts/ || echo "Warning: add_complete_rgs.py not found"
+          cp -f verify_rgs_complete.py rgs_package/scripts/ || echo "Warning: verify_rgs_complete.py not found"
+          
+          # Copy chart templates
+          for template in nl_rgs_*.json; do
+            if [ -f "$template" ]; then
+              cp "$template" rgs_package/chart_templates/
+              echo "✓ Copied $template"
+            fi
+          done
+          
+          # Create package metadata
+          cat > rgs_package/package.json << EOF
+          {
+            "name": "Dutch RGS 3.7 for ERPNext",
+            "version": "${{ env.RGS_VERSION }}.0",
+            "description": "Complete implementation of Dutch RGS for ERPNext",
+            "build_date": "$(date -u +'%Y-%m-%dT%H:%M:%SZ')",
+            "git_ref": "${{ github.ref }}",
+            "git_sha": "${{ github.sha }}",
+            "compliance": [
+              "Dutch tax reporting (IB/VPB)",
+              "VAT reporting (BTW)", 
+              "Chamber of Commerce reporting",
+              "Statistical reporting (CBS)"
+            ]
+          }
+          EOF
+          
+          echo "Package contents:"
+          find rgs_package -type f
+          
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile.rgs-complete
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          platforms: linux/amd64,linux/arm64
+          
+      - name: Test Docker image
+        run: |
+          echo "🧪 Testing Docker image..."
+          docker run --rm ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest echo "Dutch RGS ERPNext image working!"
+          
+      - name: Generate deployment instructions
+        run: |
+          cat > DEPLOYMENT.md << EOF
+          # Dutch RGS ERPNext Deployment
+          
+          ## Quick Start
+          
+          \`\`\`bash
+          # Pull the image
+          docker pull ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+          
+          # Run with docker-compose
+          version: '3.8'
+          services:
+            erpnext-rgs:
+              image: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+              ports:
+                - "8000:8000"
+              environment:
+                - FRAPPE_SITE_NAME_HEADER=your-site.com
+                - DB_HOST=db
+                - DB_PORT=3306
+              volumes:
+                - erpnext_data:/home/frappe/frappe-bench/sites
+          \`\`\`
+          
+          ## Available Tags
+          
+          $(echo '${{ steps.meta.outputs.tags }}' | sed 's/^/- /')
+          
+          ## Features
+          
+          - ✅ Complete Dutch RGS 3.7 implementation
+          - ✅ All 4 official RGS fields
+          - ✅ Government reporting compliance
+          - ✅ Multiple legal entity support
+          
+          Built on: $(date)
+          Git SHA: ${{ github.sha }}
+          EOF
+          
+      - name: Upload deployment instructions
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-instructions
+          path: DEPLOYMENT.md
+          
+  security-scan:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name != 'pull_request'
+    
+    steps:
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}:latest
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'

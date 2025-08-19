@@ -1,0 +1,27 @@
+# Add this to your existing docker-compose.yml file
+
+# OCR Service for invoice processing with positional data
+ocr-service:
+  build: ./ocr-service
+  restart: unless-stopped
+  environment:
+    - PYTHONUNBUFFERED=1
+    - FLASK_ENV=production
+  volumes:
+    - ocr_temp:/app/temp
+    - ocr_output:/app/output
+  labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.ocr.rule=Host(`ocr.fivi.eu`)"
+    - "traefik.http.routers.ocr.tls=true"
+    - "traefik.http.routers.ocr.tls.certresolver=letsencrypt"
+    - "traefik.http.services.ocr.loadbalancer.server.port=8080"
+  networks:
+    - frappe-docker
+  # Internal access only - no external ports exposed
+  # Access via https://ocr.fivi.eu or internal container name
+
+# Add these volumes to your existing volumes section
+volumes:
+  ocr_temp:
+  ocr_output:

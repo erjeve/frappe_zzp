@@ -1,0 +1,1321 @@
+{
+    "country_code": "nl", 
+    "name": "Netherlands - RGS 3.7 Complete",
+    "tree": {
+        "ACTIVA": {
+            "root_type": "Asset",
+            "is_group": 1,
+            "VASTE ACTIVA": {
+                "is_group": 1,
+                "MATERIELE VASTE ACTIVA": {
+                    "is_group": 1,
+                    "account_number": "2000",
+                    "VERBOUWINGEN": {
+                        "is_group": 1,
+                        "account_number": "2100",
+                        "Verbouwingen": {
+                            "account_type": "Fixed Asset",
+                            "account_number": "2101"
+                        },
+                        "Afschrijving verbouwingen": {
+                            "account_type": "Accumulated Depreciation",
+                            "account_number": "2105"
+                        }
+                    },
+                    "MACHINES EN INSTALLATIES": {
+                        "is_group": 1,
+                        "account_number": "2150",
+                        "Machines en installaties": {
+                            "account_type": "Fixed Asset",
+                            "account_number": "2151"
+                        },
+                        "Afschrijving machines en installaties": {
+                            "account_type": "Accumulated Depreciation",
+                            "account_number": "2155"
+                        }
+                    },
+                    "ANDERE VASTE BEDRIJFSMIDDELEN": {
+                        "is_group": 1,
+                        "account_number": "2200",
+                        "Andere vaste bedrijfsmiddelen": {
+                            "account_type": "Fixed Asset",
+                            "account_number": "2201"
+                        },
+                        "Afschrijving andere vaste bedrijfsmiddelen": {
+                            "account_type": "Accumulated Depreciation",
+                            "account_number": "2205"
+                        }
+                    },
+                    "INVENTARIS": {
+                        "is_group": 1,
+                        "account_number": "2250",
+                        "Inventaris": {
+                            "account_type": "Fixed Asset",
+                            "account_number": "2251"
+                        },
+                        "Afschrijving inventaris": {
+                            "account_type": "Accumulated Depreciation",
+                            "account_number": "2255"
+                        }
+                    },
+                    "VERVOERMIDDELEN": {
+                        "is_group": 1,
+                        "account_number": "2300",
+                        "Auto's en overige transportmiddelen": {
+                            "account_type": "Fixed Asset",
+                            "account_number": "2301"
+                        },
+                        "Afschrijving auto's en overige transportmiddelen": {
+                            "account_type": "Accumulated Depreciation",
+                            "account_number": "2305"
+                        }
+                    }
+                }
+            },
+            "VLOTTENDE ACTIVA": {
+                "is_group": 1,
+                "VOORRADEN": {
+                    "is_group": 1,
+                    "account_number": "30000",
+                    "HANDELSGOEDEREN": {
+                        "is_group": 1,
+                        "account_number": "30100",
+                        "Voorraad handelsgoederen": {
+                            "account_type": "Stock",
+                            "account_number": "30110"
+                        },
+                        "Marge-voorraden": {
+                            "account_type": "Stock",
+                            "account_number": "30120"
+                        }
+                    },
+                    "GROND- EN HULPSTOFFEN": {
+                        "is_group": 1,
+                        "account_number": "30500",
+                        "Voorraad grond- en hulpstoffen": {
+                            "account_type": "Stock",
+                            "account_number": "30510"
+                        }
+                    },
+                    "GEREED PRODUCT": {
+                        "is_group": 1,
+                        "account_number": "31500",
+                        "Voorraad gereed product": {
+                            "account_type": "Stock",
+                            "account_number": "31510"
+                        }
+                    },
+                    "ONDERHANDEN WERK": {
+                        "is_group": 1,
+                        "account_number": "32500",
+                        "Voorraad onderhanden werk": {
+                            "account_type": "Stock",
+                            "account_number": "32510"
+                        }
+                    },
+                    "VOORUITBETALINGEN OP VOORRADEN": {
+                        "is_group": 1,
+                        "account_number": "34000",
+                        "Vooruitbetaald op voorraden": {
+                            "account_type": "Current Asset",
+                            "account_number": "34010"
+                        }
+                    }
+                },
+                "ONDERHANDEN PROJECTEN": {
+                    "is_group": 1,
+                    "account_number": "35000",
+                    "ONDERHANDEN PROJECTEN IN OPDRACHT VAN DERDEN": {
+                        "is_group": 1,
+                        "account_number": "35100",
+                        "Onderhanden projecten": {
+                            "account_type": "Current Asset",
+                            "account_number": "35101"
+                        },
+                        "Gefactureerde termijnen onderhanden projecten": {
+                            "account_type": "Current Asset",
+                            "account_number": "35120"
+                        },
+                        "Voorschotten onderhanden projecten": {
+                            "account_type": "Current Asset",
+                            "account_number": "35150"
+                        },
+                        "Winstopslag onderhanden projecten": {
+                            "account_type": "Current Asset",
+                            "account_number": "35170"
+                        }
+                    }
+                },
+                "LIQUIDE MIDDELEN": {
+                    "is_group": 1,
+                    "account_number": "10000",
+                    "KAS": {
+                        "is_group": 1,
+                        "account_number": "10100",
+                        "Kas": {
+                            "account_type": "Cash",
+                            "account_number": "10101"
+                        }
+                    },
+                    "BANK": {
+                        "is_group": 1,
+                        "account_number": "10200",
+                        "Bankrekening": {
+                            "account_type": "Bank",
+                            "account_number": "10201"
+                        },
+                        "Bankrekening B": {
+                            "account_type": "Bank",
+                            "account_number": "10202"
+                        },
+                        "Depositorekening": {
+                            "account_type": "Bank",
+                            "account_number": "10230"
+                        },
+                        "Internetrekening": {
+                            "account_type": "Bank",
+                            "account_number": "10260"
+                        }
+                    },
+                    "KRUISPOSTEN": {
+                        "is_group": 1,
+                        "account_number": "10500",
+                        "Stortingen onderweg": {
+                            "account_type": "Current Asset",
+                            "account_number": "10510"
+                        },
+                        "PIN betalingen": {
+                            "account_type": "Current Asset",
+                            "account_number": "10530"
+                        },
+                        "Creditcard afrekening": {
+                            "account_type": "Current Asset",
+                            "account_number": "10550"
+                        }
+                    }
+                },
+                "VORDERINGEN": {
+                    "is_group": 1,
+                    "account_number": "13000",
+                    "DEBITEUREN": {
+                        "is_group": 1,
+                        "account_number": "13010",
+                        "Debiteuren": {
+                            "account_type": "Receivable",
+                            "account_number": "13011"
+                        },
+                        "Tussenrekening debiteuren": {
+                            "account_type": "Receivable",
+                            "account_number": "13025"
+                        }
+                    },
+                    "TE VORDEREN SUBSIDIES": {
+                        "is_group": 1,
+                        "account_number": "13200",
+                        "Te vorderen overheidssubsidies": {
+                            "account_type": "Receivable",
+                            "account_number": "13201"
+                        },
+                        "Te vorderen overige subsidies": {
+                            "account_type": "Receivable",
+                            "account_number": "13208"
+                        }
+                    },
+                    "BELASTINGVORDERINGEN": {
+                        "is_group": 1,
+                        "account_number": "13300",
+                        "Terug te vorderen Omzetbelasting": {
+                            "account_type": "Tax",
+                            "account_number": "13305"
+                        },
+                        "Terug te vorderen EU omzetbelasting": {
+                            "account_type": "Tax",
+                            "account_number": "13307"
+                        },
+                        "Terug te vorderen overige belastingen": {
+                            "account_type": "Tax",
+                            "account_number": "13330"
+                        }
+                    },
+                    "OVERIGE VORDERINGEN": {
+                        "is_group": 1,
+                        "account_number": "13800",
+                        "Waarborgsommen": {
+                            "account_type": "Current Asset",
+                            "account_number": "13810"
+                        },
+                        "Vooruitbetalingen": {
+                            "account_type": "Current Asset",
+                            "account_number": "13825"
+                        },
+                        "Overige vorderingen": {
+                            "account_type": "Current Asset",
+                            "account_number": "13850"
+                        }
+                    },
+                    "OVERLOPENDE ACTIVA": {
+                        "is_group": 1,
+                        "account_number": "14000",
+                        "Vooruitbetaalde facturen": {
+                            "account_type": "Current Asset",
+                            "account_number": "14101"
+                        },
+                        "Vooruitbetaalde andere kosten": {
+                            "account_type": "Current Asset",
+                            "account_number": "14165"
+                        },
+                        "Nog te factureren of nog te verzenden facturen": {
+                            "account_type": "Receivable",
+                            "account_number": "14305"
+                        },
+                        "Nog te ontvangen vergoedingen": {
+                            "account_type": "Receivable",
+                            "account_number": "14325"
+                        },
+                        "Overige overlopende activa": {
+                            "account_type": "Current Asset",
+                            "account_number": "14340"
+                        }
+                    },
+                    "TUSSENREKENINGEN": {
+                        "is_group": 1,
+                        "account_number": "14500",
+                        "Tussenrekeningen betalingen": {
+                            "account_type": "Current Asset",
+                            "account_number": "14510"
+                        },
+                        "Tussenrekeningen overig": {
+                            "account_type": "Current Asset",
+                            "account_number": "14590"
+                        }
+                    }
+                }
+            }
+        },
+        "PASSIVA": {
+            "root_type": "Liability",
+            "is_group": 1,
+            "EIGEN VERMOGEN": {
+                "root_type": "Equity",
+                "is_group": 1,
+                "account_number": "5000",
+                "ONDERNEMINGSVERMOGEN": {
+                    "is_group": 1,
+                    "account_number": "5500",
+                    "Ondernemingsvermogen exclusief fiscale reserves": {
+                        "account_type": "Equity",
+                        "account_number": "5501"
+                    },
+                    "Privé-stortingen": {
+                        "account_type": "Equity",
+                        "account_number": "5503"
+                    },
+                    "Privé-onttrekking contanten": {
+                        "account_type": "Equity",
+                        "account_number": "5511"
+                    },
+                    "Privé-onttrekking in natura en goederen": {
+                        "account_type": "Equity",
+                        "account_number": "5513"
+                    },
+                    "Privé-belastingen": {
+                        "account_type": "Equity",
+                        "account_number": "5515"
+                    },
+                    "Privé-premies": {
+                        "account_type": "Equity",
+                        "account_number": "5517"
+                    },
+                    "Privé-opnamen": {
+                        "account_type": "Equity",
+                        "account_number": "5519"
+                    }
+                }
+            },
+            "LANGLOPENDE SCHULDEN": {
+                "is_group": 1,
+                "account_number": "8000",
+                "SCHULDEN AAN BANKEN": {
+                    "is_group": 1,
+                    "account_number": "8200",
+                    "Financieringen van kredietinstellingen (langlopend)": {
+                        "account_type": "Liability",
+                        "account_number": "8205"
+                    },
+                    "Aflossing financiering kredietinstellingen (langlopend)": {
+                        "account_type": "Liability",
+                        "account_number": "8206"
+                    },
+                    "Leningen van kredietinstellingen (langlopend)": {
+                        "account_type": "Liability",
+                        "account_number": "8211"
+                    },
+                    "Aflossing leningen kredietinstellingen (langlopend)": {
+                        "account_type": "Liability",
+                        "account_number": "8212"
+                    }
+                },
+                "OVERIGE SCHULDEN": {
+                    "is_group": 1,
+                    "account_number": "8700",
+                    "Overige schulden": {
+                        "account_type": "Liability",
+                        "account_number": "8701"
+                    },
+                    "Aflossing overige schulden": {
+                        "account_type": "Liability",
+                        "account_number": "8702"
+                    }
+                }
+            },
+            "KORTLOPENDE SCHULDEN": {
+                "is_group": 1,
+                "account_number": "16000",
+                "CREDITEUREN": {
+                    "is_group": 1,
+                    "account_number": "16010",
+                    "Handelscrediteuren": {
+                        "account_type": "Payable",
+                        "account_number": "16011"
+                    },
+                    "Tussenrekening betalingen crediteuren (betalingen onderweg)": {
+                        "account_type": "Current Liability",
+                        "account_number": "16017"
+                    }
+                },
+                "BELASTINGEN EN PREMIES": {
+                    "is_group": 1,
+                    "account_number": "16200",
+                    "Omzetbelasting leveringen/diensten hoog tarief": {
+                        "account_type": "Tax",
+                        "account_number": "16201"
+                    },
+                    "Omzetbelasting leveringen/diensten laag tarief": {
+                        "account_type": "Tax",
+                        "account_number": "16203"
+                    },
+                    "Omzetbelasting leveringen/diensten overige tarieven": {
+                        "account_type": "Tax",
+                        "account_number": "16205"
+                    },
+                    "Omzetbelasting over privé gebruik": {
+                        "account_type": "Tax",
+                        "account_number": "16208"
+                    },
+                    "Omzetbelasting verlegd": {
+                        "account_type": "Tax",
+                        "account_number": "16210"
+                    },
+                    "Omzetbelasting leveringen/diensten uit landen buiten de EU": {
+                        "account_type": "Tax",
+                        "account_number": "16215"
+                    },
+                    "Omzetbelasting leveringen/diensten uit landen binnen EU": {
+                        "account_type": "Tax",
+                        "account_number": "16217"
+                    },
+                    "Te betalen Omzetbelasting": {
+                        "account_type": "Tax",
+                        "account_number": "16221"
+                    },
+                    "Te betalen EU omzetbelasting": {
+                        "account_type": "Tax",
+                        "account_number": "16222"
+                    },
+                    "Omzetbelasting afdracht": {
+                        "account_type": "Tax",
+                        "account_number": "16225"
+                    },
+                    "Overige belastingen": {
+                        "account_type": "Tax",
+                        "account_number": "16245"
+                    }
+                },
+                "SCHULDEN AAN BANKEN": {
+                    "is_group": 1,
+                    "account_number": "16300",
+                    "Rekening-courant bij kredietinstellingen": {
+                        "account_type": "Bank",
+                        "account_number": "16301"
+                    },
+                    "Rekening-courant bij kredietinstellingen – B": {
+                        "account_type": "Bank",
+                        "account_number": "16302"
+                    }
+                },
+                "OVERIGE SCHULDEN": {
+                    "is_group": 1,
+                    "account_number": "16500",
+                    "Overige schulden": {
+                        "account_type": "Current Liability",
+                        "account_number": "16525"
+                    }
+                },
+                "ONDERHANDEN PROJECTEN (PASSIVA)": {
+                    "is_group": 1,
+                    "account_number": "16700",
+                    "Onderhanden projecten (passiva)": {
+                        "account_type": "Current Liability",
+                        "account_number": "16701"
+                    }
+                },
+                "VOORUITBETALINGEN": {
+                    "is_group": 1,
+                    "account_number": "16750",
+                    "Vooruitgezonden facturen": {
+                        "account_type": "Current Liability",
+                        "account_number": "16751"
+                    },
+                    "Ontvangen vooruitbetalingen op bestellingen": {
+                        "account_type": "Current Liability",
+                        "account_number": "16752"
+                    }
+                },
+                "OVERLOPENDE PASSIVA": {
+                    "is_group": 1,
+                    "account_number": "17000",
+                    "Nog te betalen huren": {
+                        "account_type": "Current Liability",
+                        "account_number": "17125"
+                    },
+                    "Nog te betalen vergoedingen": {
+                        "account_type": "Current Liability",
+                        "account_number": "17130"
+                    },
+                    "Nog te betalen bijdragen": {
+                        "account_type": "Current Liability",
+                        "account_number": "17135"
+                    },
+                    "Vooruitgefactureerde omzet": {
+                        "account_type": "Current Liability",
+                        "account_number": "17250"
+                    },
+                    "Overige overlopende passiva": {
+                        "account_type": "Current Liability",
+                        "account_number": "17290"
+                    }
+                },
+                "TUSSENREKENINGEN": {
+                    "is_group": 1,
+                    "account_number": "17500",
+                    "Tussenrekening betalingen": {
+                        "account_type": "Current Liability",
+                        "account_number": "17510"
+                    },
+                    "Tussenrekeningen overig": {
+                        "account_type": "Current Liability",
+                        "account_number": "17590"
+                    }
+                }
+            }
+        },
+        "OPBRENGSTEN": {
+            "root_type": "Income",
+            "is_group": 1,
+            "NETTO-OMZET": {
+                "is_group": 1,
+                "account_number": "80000",
+                "GEPRODUCEERDE GOEDEREN": {
+                    "is_group": 1,
+                    "account_number": "80101",
+                    "Omzet geproduceerde goederen hoog tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80105"
+                    },
+                    "Omzet geproduceerde goederen laag tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80110"
+                    },
+                    "Omzet privégebruik geproduceerde goederen": {
+                        "account_type": "Income Account",
+                        "account_number": "80120"
+                    },
+                    "Omzet geproduceerde goederen naar landen buiten EU (uitvoer)": {
+                        "account_type": "Income Account",
+                        "account_number": "80135"
+                    },
+                    "Omzet geproduceerde goederen naar landen binnen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80140"
+                    },
+                    "Omzet geproduceerde goederen installatie/afstandsverkopen binnen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80145"
+                    }
+                },
+                "HANDELSGOEDEREN": {
+                    "is_group": 1,
+                    "account_number": "80300",
+                    "Omzet handelsgoederen hoog tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80301"
+                    },
+                    "Omzet handelsgoederen laag tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80305"
+                    },
+                    "Margeverkopen": {
+                        "account_type": "Income Account",
+                        "account_number": "80320"
+                    },
+                    "Omzet privégebruik handelsgoederen": {
+                        "account_type": "Income Account",
+                        "account_number": "80325"
+                    },
+                    "Omzet handelsgoederen naar landen buiten EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80340"
+                    },
+                    "Omzet Handelsgoederen naar landen binnen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80345"
+                    },
+                    "Omzet handelsgoederen installatie/afstandsverkopen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80350"
+                    }
+                },
+                "DIENSTEN": {
+                    "is_group": 1,
+                    "account_number": "80500",
+                    "Omzet diensten hoog tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80501"
+                    },
+                    "Omzet diensten laag tarief": {
+                        "account_type": "Income Account",
+                        "account_number": "80505"
+                    },
+                    "Omzet diensten naar landen buiten EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80530"
+                    },
+                    "Omzet diensten naar landen binnen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80535"
+                    },
+                    "Omzet diensten installatie/afstandsverkopen EU": {
+                        "account_type": "Income Account",
+                        "account_number": "80540"
+                    }
+                },
+                "GROEPEN": {
+                    "is_group": 1,
+                    "account_number": "80700",
+                    "Netto-omzet groep 1": {
+                        "account_type": "Income Account",
+                        "account_number": "80710"
+                    }
+                },
+                "OVERIGE OMZET": {
+                    "is_group": 1,
+                    "account_number": "81100",
+                    "Overige netto-omzet waarvan licenties": {
+                        "account_type": "Income Account",
+                        "account_number": "81101"
+                    },
+                    "Opbrengsten uit overige bronnen": {
+                        "account_type": "Income Account",
+                        "account_number": "81180"
+                    },
+                    "Omzet (nog te factureren)": {
+                        "account_type": "Income Account",
+                        "account_number": "81190"
+                    }
+                }
+            },
+            "WIJZIGING VOORRADEN": {
+                "is_group": 1,
+                "account_number": "81700",
+                "GEREED PRODUCT": {
+                    "is_group": 1,
+                    "account_number": "81710",
+                    "Wijziging in voorraden gereed product": {
+                        "account_type": "Stock Adjustment",
+                        "account_number": "81715"
+                    }
+                },
+                "ONDERHANDEN WERK": {
+                    "is_group": 1,
+                    "account_number": "81730",
+                    "Wijziging in vooraden onderhanden werk": {
+                        "account_type": "Stock Adjustment",
+                        "account_number": "81731"
+                    }
+                },
+                "ONDERHANDEN PROJECTEN": {
+                    "is_group": 1,
+                    "account_number": "81750",
+                    "Wijziging in onderhanden projecten": {
+                        "account_type": "Stock Adjustment",
+                        "account_number": "81751"
+                    }
+                }
+            },
+            "OVERIGE BEDRIJFSOPBRENGSTEN": {
+                "is_group": 1,
+                "account_number": "82000",
+                "OVERIGE OPBRENGSTEN": {
+                    "is_group": 1,
+                    "account_number": "82700",
+                    "Overige opbrengsten niet elders genoemd": {
+                        "account_type": "Income Account",
+                        "account_number": "82701"
+                    }
+                }
+            },
+            "FINANCIELE BATEN EN LASTEN": {
+                "is_group": 1,
+                "account_number": "84000",
+                "RENTEBATEN": {
+                    "is_group": 1,
+                    "account_number": "84100",
+                    "Rentebaten liquide middelen": {
+                        "account_type": "Income Account",
+                        "account_number": "84115"
+                    },
+                    "Rentebaten depositorekeningen": {
+                        "account_type": "Income Account",
+                        "account_number": "84121"
+                    },
+                    "Rentebaten bankrekeningen": {
+                        "account_type": "Income Account",
+                        "account_number": "84125"
+                    },
+                    "Rentebaten belastingen": {
+                        "account_type": "Income Account",
+                        "account_number": "84145"
+                    },
+                    "Overige rentebaten": {
+                        "account_type": "Income Account",
+                        "account_number": "84171"
+                    }
+                }
+            },
+            "NETTORESULTAAT": {
+                "is_group": 1,
+                "account_number": "97500",
+                "NETTORESULTAAT (EZ-VOF)": {
+                    "is_group": 1,
+                    "account_number": "97720",
+                    "Netto resultaat (EZ-VOF)": {
+                        "account_type": "Income Account",
+                        "account_number": "97721"
+                    }
+                }
+            }
+        },
+        "KOSTEN": {
+            "root_type": "Expense",
+            "is_group": 1,
+            "AFSCHRIJVINGEN": {
+                "is_group": 1,
+                "account_number": "43000",
+                "AFSCHRIJVINGEN MATERIELE VASTE ACTIVA": {
+                    "is_group": 1,
+                    "account_number": "43200",
+                    "Afschrijvingen verbouwingen": {
+                        "account_type": "Depreciation",
+                        "account_number": "43215"
+                    },
+                    "Afschrijvingen machines en installaties": {
+                        "account_type": "Depreciation",
+                        "account_number": "43220"
+                    },
+                    "Afschrijvingen andere vaste bedrijfsmiddelen": {
+                        "account_type": "Depreciation",
+                        "account_number": "43225"
+                    },
+                    "Afschrijvingen auto's en overige transportmiddelen": {
+                        "account_type": "Depreciation",
+                        "account_number": "43230"
+                    },
+                    "Afschrijvingen inventaris": {
+                        "account_type": "Depreciation",
+                        "account_number": "43240"
+                    }
+                },
+                "BOEKRESULTAAT MATERIELE VASTE ACTIVA": {
+                    "is_group": 1,
+                    "account_number": "43600",
+                    "Boekresultaat verbouwingen": {
+                        "account_type": "Income Account",
+                        "account_number": "43610"
+                    },
+                    "Boekresultaat machines en installaties": {
+                        "account_type": "Income Account",
+                        "account_number": "43620"
+                    },
+                    "Boekresultaat andere vaste bedrijfsmiddelen": {
+                        "account_type": "Income Account",
+                        "account_number": "43625"
+                    },
+                    "Boekresultaat auto's en overige transportmiddelen": {
+                        "account_type": "Income Account",
+                        "account_number": "43640"
+                    },
+                    "Boekresultaat inventaris": {
+                        "account_type": "Income Account",
+                        "account_number": "43645"
+                    }
+                }
+            },
+            "BEDRIJFSKOSTEN": {
+                "is_group": 1,
+                "account_number": "45000",
+                "HUISVESTINGSKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "45100",
+                    "Betaalde huur": {
+                        "account_type": "Expense Account",
+                        "account_number": "45105"
+                    },
+                    "Huurwaarde woongedeelte": {
+                        "account_type": "Income Account",
+                        "account_number": "45115"
+                    },
+                    "Schoonmaakkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45130"
+                    },
+                    "Servicekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45132"
+                    },
+                    "Beveiligingskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45135"
+                    },
+                    "Gas water en elektra (algemeen)": {
+                        "account_type": "Expense Account",
+                        "account_number": "45140"
+                    },
+                    "Energiekosten elektra": {
+                        "account_type": "Expense Account",
+                        "account_number": "45142"
+                    },
+                    "Teruglevering elektra": {
+                        "account_type": "Income Account",
+                        "account_number": "45143"
+                    },
+                    "Energiekosten gas": {
+                        "account_type": "Expense Account",
+                        "account_number": "45145"
+                    },
+                    "Energiekosten water": {
+                        "account_type": "Expense Account",
+                        "account_number": "45147"
+                    },
+                    "Privé-gebruik energie": {
+                        "account_type": "Income Account",
+                        "account_number": "45148"
+                    },
+                    "Assurantiepremies onroerende zaak": {
+                        "account_type": "Expense Account",
+                        "account_number": "45150"
+                    },
+                    "Onroerende zaakbelasting": {
+                        "account_type": "Expense Account",
+                        "account_number": "45155"
+                    },
+                    "Milieuheffingen en zuiveringsleges": {
+                        "account_type": "Expense Account",
+                        "account_number": "45160"
+                    },
+                    "Overige belastingen inzake huisvesting": {
+                        "account_type": "Expense Account",
+                        "account_number": "45165"
+                    },
+                    "Overige huisvestingskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45185"
+                    }
+                },
+                "EXPLOITATIE- EN MACHINEKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "45300",
+                    "Reparatie en onderhoud inventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "45301"
+                    },
+                    "Huur inventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "45310"
+                    },
+                    "Kleine aanschaffingen inventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "45315"
+                    },
+                    "Gereedschapskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45320"
+                    },
+                    "Overige kosten inventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "45335"
+                    },
+                    "Reparatie en onderhoud machines": {
+                        "account_type": "Expense Account",
+                        "account_number": "45340"
+                    },
+                    "Huur machines": {
+                        "account_type": "Expense Account",
+                        "account_number": "45350"
+                    },
+                    "Overige kosten machines": {
+                        "account_type": "Expense Account",
+                        "account_number": "45375"
+                    },
+                    "Assurantiepremie machines en inventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "45401"
+                    },
+                    "Verpakkingsmaterialen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45405"
+                    },
+                    "Overige exploitatie- en machinekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45410"
+                    }
+                },
+                "VERKOOPKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "45600",
+                    "Reclame- en advertentiekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45601"
+                    },
+                    "Sponsoring kosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45605"
+                    },
+                    "Beurskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45610"
+                    },
+                    "Relatiegeschenken": {
+                        "account_type": "Expense Account",
+                        "account_number": "45615"
+                    },
+                    "Representatiekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45620"
+                    },
+                    "Reis- en verblijfkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45625"
+                    },
+                    "Vrachtkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45635"
+                    },
+                    "Incassokosten a.g.v. verkoopactiviteiten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45640"
+                    },
+                    "Kilometervergoeding zakelijke reizen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45645"
+                    },
+                    "Afboeking dubieuze debiteuren": {
+                        "account_type": "Expense Account",
+                        "account_number": "45661"
+                    },
+                    "Websitekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45670"
+                    },
+                    "Overige verkoopkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45680"
+                    },
+                    "Doorberekende verkoopkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45699"
+                    }
+                },
+                "AUTOKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "45700",
+                    "Brandstofkosten auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45701"
+                    },
+                    "Reparatie en onderhoud auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45705"
+                    },
+                    "Assurantiepremie auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45710"
+                    },
+                    "Motorrijtuigenbelasting auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45715"
+                    },
+                    "Operational leasing auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45720"
+                    },
+                    "Privé-gebruik auto's en andere vervoermiddelen": {
+                        "account_type": "Income Account",
+                        "account_number": "45730"
+                    },
+                    "BTW op privé-gebruik auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45732"
+                    },
+                    "Huurkosten auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45735"
+                    },
+                    "Boetes en bekeuringen auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45750"
+                    },
+                    "Overige belastingen inzake auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45755"
+                    },
+                    "Parkeerkosten auto's en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45780"
+                    },
+                    "Overige autokosten en andere vervoermiddelen": {
+                        "account_type": "Expense Account",
+                        "account_number": "45790"
+                    },
+                    "Doorberekende autokosten en andere vervoermiddelen": {
+                        "account_type": "Income Account",
+                        "account_number": "45799"
+                    }
+                },
+                "TRANSPORTKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "45800",
+                    "Afhandelingskosten import": {
+                        "account_type": "Expense Account",
+                        "account_number": "45835"
+                    },
+                    "Opslagkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45845"
+                    },
+                    "Overige transportkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "45875"
+                    }
+                },
+                "KANTOORKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "46100",
+                    "Kantoorbenodigdheden": {
+                        "account_type": "Expense Account",
+                        "account_number": "46101"
+                    },
+                    "Porti": {
+                        "account_type": "Expense Account",
+                        "account_number": "46105"
+                    },
+                    "Telefoonkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46110"
+                    },
+                    "Privé-gebruik telefoon": {
+                        "account_type": "Income Account",
+                        "account_number": "46115"
+                    },
+                    "Drukwerk": {
+                        "account_type": "Expense Account",
+                        "account_number": "46120"
+                    },
+                    "Kleine aanschaffingen kantoorinventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "46125"
+                    },
+                    "Contributies en abonnementen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46130"
+                    },
+                    "Vakliteratuur": {
+                        "account_type": "Expense Account",
+                        "account_number": "46135"
+                    },
+                    "Boekhouding": {
+                        "account_type": "Expense Account",
+                        "account_number": "46140"
+                    },
+                    "Kosten automatisering": {
+                        "account_type": "Expense Account",
+                        "account_number": "46150"
+                    },
+                    "Kosten software abonnementen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46152"
+                    },
+                    "Assurantiepremie": {
+                        "account_type": "Expense Account",
+                        "account_number": "46155"
+                    },
+                    "Overige administratieve belastingen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46160"
+                    },
+                    "Reparatie en onderhoud kantoorinventaris": {
+                        "account_type": "Expense Account",
+                        "account_number": "46165"
+                    },
+                    "Overige kantoorkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46170"
+                    },
+                    "Communicatie": {
+                        "account_type": "Expense Account",
+                        "account_number": "46175"
+                    },
+                    "Doorberekende kantoorkosten": {
+                        "account_type": "Income Account",
+                        "account_number": "46199"
+                    }
+                },
+                "ORGANISATIEKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "46200",
+                    "Octrooi en licentiekosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46225"
+                    }
+                },
+                "ASSURANTIEKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "46300",
+                    "Bedrijfsaansprakelijkheidsverzekering": {
+                        "account_type": "Expense Account",
+                        "account_number": "46301"
+                    },
+                    "Overige assurantiepremies": {
+                        "account_type": "Expense Account",
+                        "account_number": "46305"
+                    },
+                    "Schadevergoedingen betaald": {
+                        "account_type": "Expense Account",
+                        "account_number": "46310"
+                    },
+                    "Schadevergoedingen ontvangen": {
+                        "account_type": "Income Account",
+                        "account_number": "46315"
+                    },
+                    "Overige assurantie advieskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46325"
+                    }
+                },
+                "ACCOUNTANTS- EN ADVIESKOSTEN": {
+                    "is_group": 1,
+                    "account_number": "46350",
+                    "Accountants- en advieskosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46351"
+                    },
+                    "Privé-gedeelte accountantskosten": {
+                        "account_type": "Income Account",
+                        "account_number": "46355"
+                    },
+                    "Advocaat en juridisch advies": {
+                        "account_type": "Expense Account",
+                        "account_number": "46365"
+                    }
+                },
+                "ADMINISTRATIEVE LASTEN": {
+                    "is_group": 1,
+                    "account_number": "46400",
+                    "Heffingen administratieve lasten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46401"
+                    },
+                    "Overige belastingen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46405"
+                    },
+                    "Kasverschillen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46410"
+                    },
+                    "Bankkosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46415"
+                    },
+                    "Valutaomrekeningsverschillen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46420"
+                    },
+                    "Boekingsverschillen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46425"
+                    },
+                    "Betalingsverschillen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46430"
+                    },
+                    "Boetes belastingen en premies sociale verzekeringen": {
+                        "account_type": "Expense Account",
+                        "account_number": "46435"
+                    },
+                    "Niet-verrekenbare BTW op kosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46445"
+                    },
+                    "BTW kleine-ondernemers-regeling": {
+                        "account_type": "Income Account",
+                        "account_number": "46450"
+                    },
+                    "Overige administratieve lasten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46455"
+                    }
+                },
+                "ANDERE KOSTEN": {
+                    "is_group": 1,
+                    "account_number": "46800",
+                    "Algemene kosten": {
+                        "account_type": "Expense Account",
+                        "account_number": "46801"
+                    },
+                    "Kosten zelfstandig ondernemer": {
+                        "account_type": "Expense Account",
+                        "account_number": "46819"
+                    }
+                }
+            },
+            "KOSTPRIJS VAN DE OMZET": {
+                "is_group": 1,
+                "account_number": "70000",
+                "GROND- EN HULPSTOFFEN": {
+                    "is_group": 1,
+                    "account_number": "70050",
+                    "Kosten van grond- en hulpstoffen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70053"
+                    },
+                    "Voorraadverschillen grond- en hulpstoffen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70056"
+                    },
+                    "Prijsverschillen inkoop grond- en hulpstoffen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70057"
+                    }
+                },
+                "HANDELSGOEDEREN": {
+                    "is_group": 1,
+                    "account_number": "70250",
+                    "Inkoopwaarde handelsgoederen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70251"
+                    },
+                    "Voorraadverschillen handelsgoederen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70253"
+                    },
+                    "Prijsverschillen inkoop handelsgoederen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70255"
+                    }
+                },
+                "PRODUCTIEGOEDEREN": {
+                    "is_group": 1,
+                    "account_number": "70300",
+                    "Kostprijswaarde productiegoederen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70301"
+                    },
+                    "Voorraadverschillen productiegoederen": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70303"
+                    }
+                },
+                "INKOOPKORTINGEN": {
+                    "is_group": 1,
+                    "account_number": "70350",
+                    "Inkoopkortingen en bonussen": {
+                        "account_type": "Income Account",
+                        "account_number": "70351"
+                    }
+                },
+                "BETALINGSKORTINGEN": {
+                    "is_group": 1,
+                    "account_number": "70400",
+                    "Betalingskorting debiteuren": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "70401"
+                    }
+                },
+                "GROEPEN": {
+                    "is_group": 1,
+                    "account_number": "72000",
+                    "Kostprijs - inkoopwaarde groep 1": {
+                        "account_type": "Cost of Goods Sold",
+                        "account_number": "72010"
+                    }
+                }
+            },
+            "RENTELASTEN": {
+                "is_group": 1,
+                "account_number": "84300",
+                "Rentelasten onderhandse leningen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84307"
+                },
+                "Rentelasten overige leningen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84311"
+                },
+                "Rentelasten financieringen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84313"
+                },
+                "Rentelasten kredietinstellingen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84315"
+                },
+                "Rentelasten leaseverplichtingen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84321"
+                }
+            },
+            "OVERIGE RENTELASTEN": {
+                "is_group": 1,
+                "account_number": "84400",
+                "Rentelasten belastingen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84411"
+                },
+                "Rentelasten en kosten bank": {
+                    "account_type": "Expense Account",
+                    "account_number": "84421"
+                },
+                "Overige rentelasten": {
+                    "account_type": "Expense Account",
+                    "account_number": "84441"
+                }
+            },
+            "WISSELKOERSVERSCHILLEN": {
+                "is_group": 1,
+                "account_number": "84600",
+                "Valutakoersverschillen": {
+                    "account_type": "Expense Account",
+                    "account_number": "84601"
+                }
+            },
+            "FINANCIERINGSKOSTEN": {
+                "is_group": 1,
+                "account_number": "84900",
+                "Bijkomende kosten afsluiten financiering": {
+                    "account_type": "Expense Account",
+                    "account_number": "84901"
+                }
+            }
+        }
+    }
+}

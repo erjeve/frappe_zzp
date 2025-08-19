@@ -1,0 +1,27 @@
+{
+    "name": "Dutch RGS 3.7 for ERPNext",
+    "version": "3.7.0",
+    "description": "Complete implementation of Dutch RGS (Referentie Grootboekschema) 3.7 for ERPNext",
+    "author": "ERPNext Netherlands Community",
+    "license": "MIT",
+    "rgs_version": "3.7",
+    "country": "Netherlands",
+    "compliance": [
+        "Dutch tax reporting (IB/VPB)",
+        "VAT reporting (BTW)",
+        "Chamber of Commerce reporting",
+        "Statistical reporting (CBS)"
+    ],
+    "legal_entities": [
+        "ZZP (Zelfstandige Zonder Personeel)",
+        "BV (Besloten Vennootschap)",
+        "Stichting (Foundation)",
+        "Complete RGS (All accounts)"
+    ],
+    "features": [
+        "4 official RGS fields implementation",
+        "Government reporting ready",
+        "Hierarchical account structure",
+        "Dutch locale support"
+    ]
+}

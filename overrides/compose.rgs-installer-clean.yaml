@@ -1,0 +1,47 @@
+# Dutch RGS 3.7 Installer Override (Simplified)
+# Installs RGS custom fields after site creation
+# Only active with 'rgs' profile
+
+services:
+  rgs-installer:
+    image: frappe/erpnext:rgs-latest
+    restart: "no"
+    environment:
+      SITE_NAME: ${SITE_NAME}
+    command:
+      - bash
+      - -c
+      - |
+        echo "🇳🇱 Dutch RGS 3.7 Installer"
+        echo "============================="
+        echo "Waiting for site $${SITE_NAME} to be ready..."
+        
+        # Wait for site to exist
+        export start=`date +%s`
+        until [[ -d "sites/$${SITE_NAME}" ]] && [[ -f "sites/$${SITE_NAME}/site_config.json" ]]; do
+          echo "Waiting for site $${SITE_NAME} to be created..."
+          sleep 5
+          if (( `date +%s`-start > 300 )); then
+            echo "❌ Timeout waiting for site $${SITE_NAME}"
+            exit 1
+          fi
+        done
+        
+        echo "✅ Site $${SITE_NAME} is ready!"
+        echo "Installing RGS 3.7 custom fields..."
+        
+        # Change to frappe-bench directory and run with proper context
+        cd /home/frappe/frappe-bench
+        source env/bin/activate
+        
+        # Use the proven add_complete_rgs.py script
+        python /home/frappe/rgs_scripts/add_complete_rgs.py
+        
+        echo "🎯 RGS installation completed!"
+    depends_on:
+      - create-site
+    volumes:
+      - sites:/home/frappe/frappe-bench/sites
+      - logs:/home/frappe/frappe-bench/logs
+    profiles:
+      - rgs
